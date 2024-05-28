@@ -153,8 +153,6 @@ endipresult(){
 temp_var=$1
 echo ${temp[@]} | sed -e 's/ /\n/g' | sort -u > ip.txt
 ulimit -n 102400
-chmod +x warpendpoint
-./warpendpoint
 clear
 echo "${GREEN}successfully generated ipv4 endip list${RESET}"
 echo "${GREEN}successfully create result.csv file${RESET}"
@@ -261,7 +259,14 @@ full_json='
 echo "$full_json" > output.json
 echo ""
 outputFIle=output_$(date +"%Y%m%d_%H%M%S").json
-echo "${GREEN}$outputFIle file is ready${RESET}"
+echo ""
+echo "${GREEN}Upload Files to Get Link${RESET}"
+echo "------------------------------------------------------------"
+echo ""
+echo "Your link"
+curl https://bashupload.com/ -T output.json | sed -e 's#wget#Your Link ===> #' -e 's#https://bashupload.com/\(.*\)#https://bashupload.com/\1?download=1#'
+echo "------------------------------------------------------------"
+echo ""
 mv output.json $outputFIle
 
 }

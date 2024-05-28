@@ -35,14 +35,14 @@ This script runs on your Android phone in the Termux software Or Linux Terminal 
 
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/kolangahmad/warp-scanner/main/install.sh -o install.sh && chmod +x install.sh && bash install.sh
+curl -sSL https://raw.githubusercontent.com/kolangahmad/warp-scanner/android/install.sh -o install.sh && chmod +x install.sh && bash install.sh
 
 ```
 
 
 > [!CAUTION]
 > ## نحوه استفاده از کانفیگ
-> در انتها یک فایل جیسون در پوشه ای که هستید ساخته می شود که می توانید محتوای آن را کپی کرده و در هایدیفای اضافه کنید
+> در انتها یک آدرس ساخته می شود که می توانید آن را کپی کرده و در هایدیفای پیست کنید
 ## موفق باشید 
 
 

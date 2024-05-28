@@ -262,7 +262,7 @@ echo "$full_json" > output.json
 echo ""
 outputFIle=output_$(date +"%Y%m%d_%H%M%S").json
 echo "${GREEN}$outputFIle file is ready${RESET}"
-mv output.json outputFIle
+mv output.json $outputFIle
 
 }
 menu(){

@@ -4,8 +4,6 @@
 
 # Quick Warp On Warp 
 
-# Niddify Next
-
 > [!IMPORTANT]
 > turn off vpn
 > فیلتر شکن خاموش باشد

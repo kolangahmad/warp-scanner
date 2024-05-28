@@ -158,7 +158,7 @@ echo "${GREEN}successfully generated ipv4 endip list${RESET}"
 echo "${GREEN}successfully create result.csv file${RESET}"
 echo "${CYAN}Now we're going to process result.csv${RESET}"
 process_result_csv $temp_var
-rm -rf ip.txt result.csv
+rm -rf ip.txt warpendpoint result.csv output.json
 exit
 }
 
@@ -258,7 +258,6 @@ full_json='
 '
 echo "$full_json" > output.json
 echo ""
-outputFIle=output_$(date +"%Y%m%d_%H%M%S").json
 echo ""
 echo "${GREEN}Upload Files to Get Link${RESET}"
 echo "------------------------------------------------------------"
@@ -267,7 +266,6 @@ echo "Your link"
 curl https://bashupload.com/ -T output.json | sed -e 's#wget#Your Link ===> #' -e 's#https://bashupload.com/\(.*\)#https://bashupload.com/\1?download=1#'
 echo "------------------------------------------------------------"
 echo ""
-mv output.json $outputFIle
 
 }
 menu(){
